@@ -7,11 +7,11 @@ namespace EmpacadoraLimonAPI.DTOs
 {
     public class MovimientoDTOCrear
     {
-        public int? IdLote { get; set; }
+        public int IdLote { get; set; }
 
-        public int? IdDestino { get; set; }
+        public int IdDestino { get; set; }
 
-        public DateTime? FechaEnvio { get; set; }
+        public DateOnly? Fecha { get; set; }
 
         public string? Transporte { get; set; }
 

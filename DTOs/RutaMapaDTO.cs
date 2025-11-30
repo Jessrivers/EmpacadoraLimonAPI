@@ -13,7 +13,7 @@ namespace EmpacadoraLimonAPI.DTOs
 
         public DestinoCoordenadas? Destino { get; set; }
 
-        public DateTime? FechaEnvio { get; set; }
+        public DateOnly? Fecha { get; set; }
 
         public string? Transporte { get; set; }
     }

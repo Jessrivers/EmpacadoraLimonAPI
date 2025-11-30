@@ -11,11 +11,9 @@ public partial class Destino
 
     public string? Direccion { get; set; }
 
-    public decimal Latitud { get; set; }
+    public decimal? Latitud { get; set; }
 
-    public decimal Longitud { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
+    public decimal? Longitud { get; set; }
 
     public virtual ICollection<Movimiento> Movimientos { get; set; } = new List<Movimiento>();
 }

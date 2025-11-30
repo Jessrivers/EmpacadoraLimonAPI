@@ -57,19 +57,19 @@ namespace EmpacadoraLimonAPI.Controllers
             var lotes = await db.Lotes
                 .Include(x => x.IdProveedorNavigation)
                 .Where(x => x.IdProveedor == idProveedor)
-                .OrderBy(x => x.FechaRecepcion)
+                .OrderBy(x => x.Fecha)
                 .ToListAsync();
 
             return mapper.Map<List<LoteDTO>>(lotes);
         }
 
         [HttpGet("Fecha")]
-        public async Task<List<LoteDTO>> GetByFecha([FromQuery] DateTime fechaInicio, [FromQuery] DateTime fechaFin)
+        public async Task<List<LoteDTO>> GetByFecha([FromQuery] DateOnly fechaInicio, [FromQuery] DateOnly fechaFin)
         {
             var lotes = await db.Lotes
                 .Include(x => x.IdProveedorNavigation)
-                .Where(x => x.FechaRecepcion >= fechaInicio && x.FechaRecepcion <= fechaFin)
-                .OrderBy(x => x.FechaRecepcion)
+                .Where(x => x.Fecha >= fechaInicio && x.Fecha <= fechaFin)
+                .OrderBy(x => x.Fecha)
                 .ToListAsync();
 
             return mapper.Map<List<LoteDTO>>(lotes);

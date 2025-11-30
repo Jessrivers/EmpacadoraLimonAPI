@@ -11,13 +11,11 @@ public partial class Proveedor
 
     public string? Direccion { get; set; }
 
-    public decimal Latitud { get; set; }
+    public decimal? Latitud { get; set; }
 
-    public decimal Longitud { get; set; }
+    public decimal? Longitud { get; set; }
 
     public string? Telefono { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
 
     public virtual ICollection<Lote> Lotes { get; set; } = new List<Lote>();
 }

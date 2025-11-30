@@ -11,7 +11,7 @@ public partial class Movimiento
 
     public int IdDestino { get; set; }
 
-    public DateTime? FechaEnvio { get; set; }
+    public DateOnly? Fecha { get; set; }
 
     public string? Transporte { get; set; }
 

@@ -55,7 +55,7 @@ namespace EmpacadoraLimonAPI.Controllers
             var movimientos = await db.Movimientos
                 .Include(x => x.IdDestinoNavigation)
                 .Where(x => x.IdLote == idLote)
-                .OrderBy(x => x.FechaEnvio)
+                .OrderBy(x => x.Fecha)
                 .ToListAsync();
 
             return mapper.Map<List<MovimientoDTO>>(movimientos);
@@ -78,7 +78,7 @@ namespace EmpacadoraLimonAPI.Controllers
             var ruta = new RutaMapaDTO
             {
                 IdMovimiento = movimiento.IdMovimiento,
-                FechaEnvio = movimiento.FechaEnvio,
+                Fecha = movimiento.Fecha,
                 Transporte = movimiento.Transporte,
                 Proveedor = movimiento.IdLoteNavigation?.IdProveedorNavigation != null
                     ? new ProveedorCoordenadas

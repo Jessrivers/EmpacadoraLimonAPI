@@ -9,9 +9,9 @@ namespace EmpacadoraLimonAPI.DTOs
     {
         public int IdProveedor { get; set; }
 
-        public DateTime? FechaRecepcion { get; set; }
+        public DateOnly? Fecha { get; set; }
 
-        public decimal CantidadKg { get; set; }
+        public decimal? CantidadKg { get; set; }
 
         public string? Calidad { get; set; }
 
