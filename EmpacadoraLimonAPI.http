@@ -1,0 +1,6 @@
+@EmpacadoraLimonAPI_HostAddress = http://localhost:5052
+
+GET {{EmpacadoraLimonAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
